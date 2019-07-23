@@ -1,3 +1,17 @@
 h1 {
   color: blue;
 }
+.card{
+  display: inline-block;
+  margin: 40px;
+  width: 18rem;
+  height: 22rem;
+}
+.cards{
+  text-align: center;
+}
+.card-img-top{
+  height:180px;
+  width: 200px;
+
+}
