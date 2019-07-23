@@ -18,7 +18,7 @@ class HomeHandler(webapp2.RequestHandler): #homepage "/"
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
         about_template = the_jinja_env.get_template('templates/about.html')
-        self.response.write(about_template.render())  
+        self.response.write(about_template.render())
 
 class ResultsHandler(webapp2.RequestHandler):
     def get(self):
@@ -33,7 +33,7 @@ class ResultsHandler(webapp2.RequestHandler):
 
 # the routes / app configuration section
 app = webapp2.WSGIApplication([
-  ('/', HomeHandler),
+  ('/home', HomeHandler),
   ('/about', AboutHandler),
   ('/results', ResultsHandler),
   ], debug=True)

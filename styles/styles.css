@@ -1,3 +1,13 @@
 h1 {
   color: blue;
 }
+.slideOne {
+  color: black;
+}
+.card{
+  display:inline-block;
+}
+
+.cardContainer {
+ text-align :center;
+}
