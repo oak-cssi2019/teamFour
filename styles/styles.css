@@ -3,9 +3,8 @@ h1 {
 }
 .card{
   display: inline-block;
-  margin: 40px;
   width: 18rem;
-  height: 22rem;
+  height: 24rem;
 }
 .cards{
   text-align: center;
