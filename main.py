@@ -48,7 +48,7 @@ class PokemonHandler(webapp2.RequestHandler):
         self.response.write(pokemon_template.render())
 # the routes / app configuration section
 app = webapp2.WSGIApplication([
-  ('/', HomeHandler),
+  ('/home', HomeHandler),
   ('/about', AboutHandler),
   ('/results', ResultsHandler),
   ('/pokemon', PokemonHandler)

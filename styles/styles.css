@@ -17,3 +17,47 @@ image{
   width: 200px;
 
 }
+.slideOne {
+  color: black;
+}
+.card{
+  display:inline-block;
+}
+
+.cardContainer {
+ text-align:center;
+}
+
+body{
+  background-color: black;
+}
+
+.darkText {
+  color:black;
+}
+
+.bd-example {
+
+ border-style:  solid;
+ border-color: #002036;
+ border-width: 6px;
+ margin:auto;
+ width: 1400px;
+ height: auto;
+}
+
+
+.nav-link{
+
+  font-style:italic;
+
+}
+
+nav {
+  margin-right: 2px;
+  margin-left: 100px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+  width: 1200px;
+}
