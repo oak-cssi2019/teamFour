@@ -9,10 +9,15 @@ let leftPokemon;
     $.get(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`).then(function(pokeData){
     console.log("Left Pokemon Data: ", pokeData);
 
-leftPokemon = pokeData;
+function getRandoMove(){
+  let maxMove = leftPokemon['moves'].length
+  let randomMove = Math.floor(Math.random() * maxMove) + 1;
+  return randomMove;
+}
 
+leftPokemon = pokeData;
 let leftPokemonDisplay =`
-<h2  >${leftPokemon['name']}</h2>
+<h2 class="capitalize" >${leftPokemon['name']}</h2>
 <img class="pokemon-img" src="${leftPokemon['sprites']['front_default']}">
 <br>
 <br>
@@ -29,22 +34,29 @@ let leftPokemonDisplay =`
 <h3>Type 1: ${leftPokemon['types'] [0] ['type'] ['name']}</h3>
 ${function(){
    if (leftPokemon['types'][1]){
-     return `<h3>Types 2: ${leftPokemon['types'] [1] ['type'] ['name']}</h3>`
+     return `<h3>Type 2: ${leftPokemon['types'] [1] ['type'] ['name']}</h3>`
    } else{
      return ``
    }
-
 }()}
 <br>
 <h3>Shiny form: </h3>
 <img class="pokemon-img2" src="${leftPokemon['sprites']['front_shiny']}">
 <br>
-<h3></h3>
+<h3>Speed: ${leftPokemon['stats'] [0] ['base_stat']} / Health: ${leftPokemon['stats'] [5] ['base_stat']}</h3>
+
+<h3>Special Defense: ${leftPokemon['stats'] [1] ['base_stat']} / Defense: ${leftPokemon['stats'] [3] ['base_stat']}</h3>
+
+<h3>Special Attack: ${leftPokemon['stats'] [2] ['base_stat']} / Attack: ${leftPokemon['stats'] [4] ['base_stat']}</h3></h3>
+
 <br>
+<h3>Move 1: ${leftPokemon['moves'] [getRandoMove()] ['move'] ['name']} / Move 2: ${leftPokemon['moves'] [getRandoMove()] ['move'] ['name']}</h3>
+
+<h3>Move 3: ${leftPokemon['moves'] [getRandoMove()] ['move'] ['name']} / Move 4: ${leftPokemon['moves'] [getRandoMove()] ['move'] ['name']}</h3>
 <button value="Refresh Page" onClick="window.location.reload();">Click me to get another pokemon</buttoN>
-<h1 class="rainbow-text">Thx to David, Asrid, and coach Bella for making this possible</h1>
+<h1 class="rainbow-text">Thx to Asrid, coach Bella, David for making this possible</h1>
 `
-console.log(leftPokemon)
+//console.log(leftPokemon)
 $("#left").empty();
 $("#left").append(leftPokemonDisplay);
     });
