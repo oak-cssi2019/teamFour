@@ -1,5 +1,21 @@
 h1 {
-  color: blue;
+  color: black;
+}
+image{
+  max-height: 70vh;
+}
+.card{
+  display: inline-block;
+  width: 18rem;
+  height: 24rem;
+}
+.cards{
+  text-align: center;
+}
+.card-img-top{
+  height:180px;
+  width: 200px;
+
 }
 .slideOne {
   color: black;
