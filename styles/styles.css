@@ -8,6 +8,7 @@ image{
   display: inline-block;
   width: 18rem;
   height: 24rem;
+  margin: 20px;
 }
 .cards{
   text-align: center;
@@ -28,9 +29,9 @@ image{
  text-align:center;
 }
 
-body{
+/* body{
   background-color: black;
-}
+} */
 
 .darkText {
   color:black;

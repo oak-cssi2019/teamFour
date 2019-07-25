@@ -42,16 +42,23 @@ class QuizHandler(webapp2.RequestHandler):
         quiz_template = the_jinja_env.get_template('templates/quiz.html')
         self.response.write(quiz_template.render())
         # raw_input("Who is jesus christ")
+
 class PokemonHandler(webapp2.RequestHandler):
     def get(self):
         pokemon_template = the_jinja_env.get_template('templates/pokemon.html')
         self.response.write(pokemon_template.render())
+
+class SavedHandler(webapp2.RequestHandler):
+    def get(self):
+        saved_template = the_jinja_env.get_template('templates/saved_pokemon.html')
+        self.response.write(saved_template.render())
 # the routes / app configuration section
 app = webapp2.WSGIApplication([
   ('/home', HomeHandler),
   ('/about', AboutHandler),
   ('/results', ResultsHandler),
-  ('/pokemon', PokemonHandler)
+  ('/pokemon', PokemonHandler),
+  ('/saved', SavedHandler)
   ], debug=True)
 
 
