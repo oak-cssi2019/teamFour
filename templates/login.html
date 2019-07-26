@@ -1,0 +1,56 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- imports bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+  </head>
+
+  <body class="login-user" background = "https://wallpaperplay.com/walls/full/0/8/d/182521.jpg" >
+
+    <div id="login_div" class="main_div">
+      <h3>Poke Login</h3>
+      <input type="email" placeholder="Email..." id="email_field"/>
+      <input type="password" placeholder="Password..." id="password_field"/>
+      <button id = "login-button" onClick="login()">Login to Account</button>
+    </div>
+    <div>
+    <div id="logout_div" class="loggedin-div">
+
+
+      <h3>Welcome User</h3>
+      <p id="user_para">Welcome to the PokeNattorz! You're currently logged in! Go explore the <a href="/home">Home</a> page</p>
+      <button onClick="logout()">Logout</button>
+
+    </div>
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAIankn0qOWsc08rmwqWq8uRG3Gd8XhPyA",
+    authDomain: "pokenatorrz-login.firebaseapp.com",
+    databaseURL: "https://pokenatorrz-login.firebaseio.com",
+    projectId: "pokenatorrz-login",
+    storageBucket: "",
+    messagingSenderId: "444452865383",
+    appId: "1:444452865383:web:8c210dc9cf1d0072"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="../scripts/script.js"></script>
+  </body>
+</html>

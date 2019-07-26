@@ -46,12 +46,23 @@ class PokemonHandler(webapp2.RequestHandler):
     def get(self):
         pokemon_template = the_jinja_env.get_template('templates/pokemon.html')
         self.response.write(pokemon_template.render())
+
+class LoginHandler(webapp2.RequestHandler):
+    def get(self):
+        pokemon_template = the_jinja_env.get_template('templates/login.html')
+        self.response.write(pokemon_template.render())
+
+
 # the routes / app configuration section
 app = webapp2.WSGIApplication([
   ('/home', HomeHandler),
   ('/about', AboutHandler),
   ('/results', ResultsHandler),
-  ('/pokemon', PokemonHandler)
+  ('/pokemon', PokemonHandler),
+  ('/quiz', QuizHandler),
+    ('/login', LoginHandler),
+
+
   ], debug=True)
 
 

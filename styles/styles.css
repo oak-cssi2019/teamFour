@@ -28,9 +28,9 @@ image{
  text-align:center;
 }
 
-body{
+/* body{
   background-color: black;
-}
+} */
 
 .darkText {
   color:black;
@@ -60,4 +60,21 @@ nav {
   margin-bottom: 8px;
 
   width: 1200px;
+}
+
+.login-user{
+
+  margin:auto;
+}
+
+#user_para {
+  color: white;
+}
+
+h3 {
+  color:white;
+}
+
+#login-button {
+  color:black;
 }
