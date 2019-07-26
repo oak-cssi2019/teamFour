@@ -9,13 +9,16 @@ let leftPokemon;
     $.get(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`).then(function(pokeData){
     console.log("Left Pokemon Data: ", pokeData);
 
+
 function getRandoMove(){
   let maxMove = leftPokemon['moves'].length
   let randomMove = Math.floor(Math.random() * maxMove) + 1;
   return randomMove;
 }
-
+rightPokemon = JSON.stringify(pokeData)
 leftPokemon = pokeData;
+let pokeDataToPass = {"name": leftPokemon.name}
+
 let leftPokemonDisplay =`
 <h2 class="capitalize" >${leftPokemon['name']}</h2>
 <img class="pokemon-img" src="${leftPokemon['sprites']['front_default']}">
@@ -54,7 +57,15 @@ ${function(){
 
 <h3>Move 3: ${leftPokemon['moves'] [getRandoMove()] ['move'] ['name']} / Move 4: ${leftPokemon['moves'] [getRandoMove()] ['move'] ['name']}</h3>
 <button value="Refresh Page" onClick="window.location.reload();">Click me to get another pokemon</buttoN>
-<h1 class="rainbow-text">Thx to Asrid, coach Bella, David for making this possible</h1>
+
+<form method="post">
+  <input type="hidden" name="currentPokemonName" value=${leftPokemon['name']}>
+  <input type="hidden" name="currentPokemonPic" value=${leftPokemon['sprites']['front_default']}>
+  <input type="hidden" name="currentPokemonTY1" value=${leftPokemon['types'][0]['type']['name']}>
+  <input type="hidden" name="currentPokemonTY2" value=${leftPokemon ['types'][1]['type']['name']}>
+  <button type="submit">Save this Pokemon</button>
+</form>
+<h1 class="rainbow-text">Thx to Asrid, coach Bell, Dave Ung for making this possible</h1>
 `
 //console.log(leftPokemon)
 $("#left").empty();

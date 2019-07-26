@@ -15,8 +15,8 @@
     }
     .poke-img-in{
       position: absolute;
-      left: 41%;
-      top: 310px;
+      left: 42%;
+      top: 325px;
     }
     .pokemon-img{
       position: absolute;
@@ -27,7 +27,7 @@
     .pokemon-img2{
       position: absolute;
       left: 56%;
-      top: 72%;
+      top: 73%;
     }
     #leftButton{
       text-align: center;
@@ -42,7 +42,7 @@
   }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> <!-- imports jQuery library -->
-    <title>Pokemon gene</title>
+    <title>Saved Pokemon</title>
     </head>
     <body background = "https://wallpaperplay.com/walls/full/0/8/d/182521.jpg">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -65,30 +65,24 @@
       <li>
         <a class="nav-link" href="http://localhost:8080/saved">Saved Pokemon <span class="sr-only">(current)</span></a>
       </li>
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          More Items
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Top ten list</a>
-          <a class="dropdown-item" href="#">Best Pokemon </a>
-          <a class="dropdown-item" href="#">How to list</a>
-        </div>
-      </li> -->
+</nav>
 
-    </ul>
-  </div>
- </nav>
-    <h1 id="header">Pokemon Gene</h1>
-    <!-- <img src="https://mail.google.com/mail/u/0?ui=2&ik=d59c777c64&attid=0.1&permmsgid=msg-f:1639966009702442853&th=16c254659c076765&view=att&disp=safe&realattid=f_jyhlbddj0"> -->
-    <div id="container">
-    <div id="battleArea">
+      {% for each_poke in poke_info %}
       <br>
-    <img class="poke-img-out" src="https://i.ya-webdesign.com/images/open-pokeball-png-8.png" width="200px" height="200px">
-    <div id="left">
-    <button id="leftButton" ><img class="poke-img-in" src="assets/pokeball2.png" width="235px"> </button>
+      <h1>{{each_poke.name}}</h1>
+      <img src={{each_poke.picture}}>
+      <h2>Type1: {{each_poke.ty1}}</h2>
+      <h2>Type2: {{each_poke.ty2}}</h2>
+      <br>
+      {% endfor %}
+      <h1 class="rainbow-text">This is made possible by coach Taco and coach Bell</h1>
 
-    </div>
+
+
+
+
+
+
 
 
 
