@@ -69,6 +69,62 @@ body{
   text-align: center;
   background: "https://wallpaperplay.com/walls/full/0/8/d/182521.jpg" ;
 }
-/* body {
-background: "https://wallpaperplay.com/walls/full/0/8/d/182521.jpg" ;
+.card{
+  display: inline-block;
+  width: 18rem;
+  height: 24rem;
+  margin: 20px;
+  color:black
+}
+.cards{
+  text-align: center;
+}
+.card-img-top{
+  height:180px;
+  width: 200px;
+
+}
+.slideOne {
+  color: black;
+}
+.card{
+  display:inline-block;
+}
+
+.cardContainer {
+ text-align:center;
+}
+
+/* body{
+  background-color: black;
 } */
+
+.darkText {
+  color:black;
+}
+
+.bd-example {
+
+ border-style:  solid;
+ border-color: #002036;
+ border-width: 6px;
+ margin:auto;
+ width: 1400px;
+ height: auto;
+}
+
+
+.nav-link{
+
+  font-style:italic;
+
+}
+
+nav {
+  margin-right: 2px;
+  margin-left: 100px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+  width: 1200px;
+}
