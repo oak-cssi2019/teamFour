@@ -73,6 +73,12 @@ class QuizHandler(webapp2.RequestHandler):
 class PokemonHandler(webapp2.RequestHandler):
     def get(self):
         pokemon_template = the_jinja_env.get_template('templates/pokemon.html')
+        self.response.write(pokemon_template.render())
+
+class LoginHandler(webapp2.RequestHandler):
+    def get(self):
+        pokemon_template = the_jinja_env.get_template('templates/login.html')
+        self.response.write(pokemon_template.render())
         var_dict={
 
             'savedPoke': ""
@@ -118,6 +124,7 @@ app = webapp2.WSGIApplication([
   ('/about', AboutHandler),
   ('/results', ResultsHandler),
   ('/pokemon', PokemonHandler),
+  ('/login', LoginHandler),
   ('/saved', SavedHandler),
   ('/quiz',QuizHandler)
   ], debug=True)
