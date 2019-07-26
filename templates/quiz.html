@@ -5,45 +5,291 @@
     <link rel="stylesheet" type="text/css" href="../styles/styles.css"> <!-- imports styles.css stylesheet -->
     <title>Final Project</title>
   </head>
-  <body>
+  <body background = "https://wallpaperplay.com/walls/full/0/8/d/182521.jpg">
 
     <div>
       <h1>Welcome to Pokemon Quiz, we will test your knowlegde </h1>
       <h2> Are you ready?</h2>
       <div class="image">
-         <img src="https://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png" alt="..">
+         <img src="http://pluspng.com/img-png/pokemon-logo-png-pokemon-logo-png-2000.png" alt=".." width="600" height="200">
     </div>
+    <!--Code for question 1 -->
+      <h4>Question 1:</h4>
+      <form method="get" action="/results">
     <h3> What generation is Pikachu from?</h3>
-      <form method =”post” action="/results">
-        <br>Your Answer:
-        <input type="text" answer="user-answer1">
-        <br>
-        <h3>What Pokemon games are generation 5?</h3>
-        <br>Your Answer:
-        <input type="text" answer="user-answer2">
-        <br>
-        <h3>How many new Pokemoms are in generation 7?</h3>
-        <br>Your Answer:
-        <input type="text" answer="user-answer3">
-        <br>
-        <h3>What Pokemon can learn any move?</h3>
-        <br>Your Answer:
-        <input type="text" answer="user-answer4">
-        <br>
-        <h3>Who's the very first Pokemon is Pokedex?</h3>
-        <br>Your Answer:
-        <input type="text" answer="user-answer5">
-
-        <br>
-
-
-
-
-      </form>
+    <div>
+      <input type="radio" id="Gen 2" name="q1" value="Gen 2"
+     checked>
+     <label for="Gen 2">Gen 2</label>
     </div>
+    <div>
+      <input type="radio" id="Gen 1" name="q1" value="Gen 1"
+     checked>
+     <label for="Gen 1">Gen 1</label>
+    </div>
+    <div>
+      <input type="radio" id="Gen 4" name="q1" value="Gen 4"
+     checked>
+     <label for="Gen 4">Gen 4</label>
+    </div>
+    <div>
+      <input type="radio" id="Gen 3" name="q1" value="Gen 3"
+     checked>
+     <label for="Gen 3">Gen 3</label>
+    </div>
+  <!-- </form> -->
+        <!-- <div class="image">
+           <img src="http://pluspng.com/img-png/pokemon-logo-png-pokemon-logo-png-2000.png" alt=".." width="600" height="200">
+      </div> -->
+      <!--Code for question 2 -->
+          <h4>Question 2:</h4>
+        <h3>What Pokemon games are generation 5?</h3>
+        <div>
+          <input type="radio" id="Emerald" name="q2" value="Emerald"
+         checked>
+         <label for="Emerald">Emerald</label>
+        </div>
+        <div>
+          <input type="radio" id="Black and White" name="q2" value="Black and White"
+         checked>
+         <label for="Black and White">Black and White</label>
+        </div>
+        <div>
+          <input type="radio" id="Platinum" name="q2" value="Platinum"
+         checked>
+         <label for="Platinum">Platinum</label>
+        </div>
+        <div>
+          <input type="radio" id="Heartgold" name="q2" value="Heartgold"
+         checked>
+         <label for="Heartgold">Heartgold</label>
+        </div>
+<!--
+        <div class="image">
+           <img src="https://media.indiedb.com/images/games/1/68/67371/Logo.png" alt=".." width="500" height="333">
+      </div> -->
 
+      <!--Code for question 3 -->
+          <h4>Question 3:</h4>
+        <h3>How many new Pokemons are in generation 7?</h3>
+        <div>
+          <input type="radio" id="88" name="q3" value="88"
+         checked>
+         <label for="88">88</label>
+        </div>
+        <div>
+          <input type="radio" id="40" name="q3" value="40"
+         checked>
+         <label for="40">40</label>
+        </div>
+        <div>
+          <input type="radio" id="35" name="q3" value="35"
+         checked>
+         <label for="35">35</label>
+        </div>
+        <div>
+          <input type="radio" id="67" name="q3" value="67"
+         checked>
+         <label for="67">67</label>
+        </div>
 
-    <!-- imports all script files including project's script.js file, jQuery, and bootstrap script files -->
+        <!--Code for question 4 -->
+          <h4>Question 4:</h4>
+
+        <h3>What Pokemon can learn any move in Generation 1?</h3>
+        <div>
+          <input type="radio" id="Squirtle" name="q4" value="Squirtle"
+         checked>
+         <label for="Squirtle">Squirtle</label>
+        </div>
+        <div>
+          <input type="radio" id="Mew" name="q4" value="Mew"
+         checked>
+         <label for="Mew">Mew</label>
+        </div>
+        <div>
+          <input type="radio" id="Ditto" name="q4" value="Ditto"
+         checked>
+         <label for="Ditto">Ditto</label>
+        </div>
+        <div>
+          <input type="radio" id="Smeargle" name="q4" value="Smeargle"
+         checked>
+         <label for="Smeargle">Smeargle</label>
+        </div>
+        <!--Code for question 5 -->
+          <h4>Question 5:</h4>
+        <h3>Who's the very first Pokemon is Pokedex?</h3>
+        <div>
+          <input type="radio" id="Bulbasaur" name="q5" value="Bulbasaur"
+         checked>
+         <label for="Bulbasaur">Bulbasaur</label>
+        </div>
+        <div>
+          <input type="radio" id="Pikachu" name="q5" value="Pikachu"
+         checked>
+         <label for="Pikachu">Pikachu</label>
+        </div>
+        <div>
+          <input type="radio" id="Eevee" name="q5" value="Eevee"
+         checked>
+         <label for="Eevee">Eevee</label>
+        </div>
+        <div>
+          <input type="radio" id="Arceus" name="q5" value="Arceus"
+         checked>
+         <label for="Arceus">Arceus</label>
+        </div>
+        <!--Code for question 7 -->
+          <h4>Question 6:</h4>
+        <h3>What is Ash's name in Japanese?</h3>
+        <div>
+          <input type="radio" id="Sagittarius" name="q6" value="Sagittarius"
+         checked>
+         <label for="Sagittarius">Sagittarius</label>
+        </div>
+        <div>
+          <input type="radio" id="Ash" name="q6" value="Ash"
+         checked>
+         <label for="Ash">Ash</label>
+        </div>
+        <div>
+          <input type="radio" id="Satoshi" name="q6" value="Satoshi"
+         checked>
+         <label for="Satoshi">Satoshi</label>
+        </div>
+        <div>
+          <input type="radio" id="Akashi" name="q6" value="Akashi"
+         checked>
+         <label for="Akasi">Akashi</label>
+        </div>
+        <!--Code for question 8 -->
+          <h4>Question 7:</h4>
+        <h3>How many Pokemon movies are there?</h3>
+        <div>
+          <input type="radio" id="18" name="q7" value="18"
+         checked>
+         <label for="18">18</label>
+        </div>
+        <div>
+          <input type="radio" id="10" name="q7" value="10"
+         checked>
+         <label for="10">10</label>
+        </div>
+        <div>
+          <input type="radio" id="19" name="q7" value="19"
+         checked>
+         <label for="19">19</label>
+        </div>
+        <div>
+          <input type="radio" id="17" name="q7" value="17"
+         checked>
+         <label for="17">17</label>
+        </div>
+        <!--Code for question 9 -->
+          <h4>Question 8:</h4>
+        <h3>Which of the Pokemons control time?</h3>
+        <div>
+          <input type="radio" id="Palkia" name="q8" value="Palkia"
+         checked>
+         <label for="Palkia">Palkia</label>
+        </div>
+        <div>
+          <input type="radio" id="Dialga" name="q8" value="Dialga"
+         checked>
+         <label for="Dialga">Dialga</label>
+        </div>
+        <div>
+          <input type="radio" id="Regigigas" name="q8" value="Regigigas"
+         checked>
+         <label for="Regigigas">Regigigas</label>
+        </div>
+        <div>
+          <input type="radio" id="Celebi" name="q8" value="Celebi"
+         checked>
+         <label for="Celebi">Celebi</label>
+        </div>
+        <!--Code for question 10 -->
+          <h4>Question 9:</h4>
+        <h3>Which generation introduced Umbreon and Espeon?</h3>
+        <div>
+          <input type="radio" id="Generation 4" name="q9" value="Generation 4"
+         checked>
+         <label for="Generation 4">Generation 4</label>
+        </div>
+        <div>
+          <input type="radio" id="Generation 5" name="q9" value="Generation 5"
+         checked>
+         <label for="Generation 5">Generation 5</label>
+        </div>
+        <div>
+          <input type="radio" id="Generation 2" name="q9" value="Generation 2"
+         checked>
+         <label for="Generation 2">Generation 2</label>
+        </div>
+        <div>
+          <input type="radio" id="Generation 7" name="q9" value="Generation 7"
+         checked>
+         <label for="Generation 7">Generation 7</label
+        </div>
+        <br>
+        <br>
+          <!-- Code for question 11 -->
+          <h4>Question 10:</h4>
+        <h3>How much affection does the average affection-evolving pokemon need in order to evolve?</h3>
+        <div>
+          <input type="radio" id="80%" name="q10" value="80%"
+         checked>
+         <label for="80%">80%</label>
+        </div>
+        <div>
+          <input type="radio" id="Max" name="q10" value="Max"
+         checked>
+         <label for="Ma%">Max</label>
+        </div>
+        <div>
+          <input type="radio" id="55%" name="q10" value="55%"
+         checked>
+         <label for="55%">55%</label>
+        </div>
+        <div>
+          <input type="radio" id="25%" name="q10" value="25%"
+         checked>
+         <label for="25%">25%</label>
+        </div>
+        <br>
+        <br>
+          <!-- Code for question 12 -->
+
+          <h4>Question 11:</h4>
+        <h3>Which of the following is called the 'gripper pokemon'?</h3>
+        <br>
+        <div>
+          <input type="radio" id="Dusknior" name="q11" value="Dusknior"
+         checked>
+         <label for="Dusknior">Dusknior</label>
+        </div>
+        <div>
+          <input type="radio" id="Steelix" name="q11" value="Steelix"
+         checked>
+         <label for="Steelix">Steelix</label>
+        </div>
+        <div>
+          <input type="radio" id="Grumpig" name="q11" value="Grumpig"
+         checked>
+         <label for="Grumpig">Grumpig</label>
+        </div>
+        <div>
+          <input type="radio" id="Bewear" name="q11" value="Bewear"
+         checked>
+         <label for="Bewear">Bewear</label>
+        </div>
+        <div>
+      <button type="submit">Submit</button>
+ </div>
+</form>
+
+  <!-- imports all script files including project's script.js file, jQuery, and bootstrap script files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
