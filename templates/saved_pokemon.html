@@ -44,7 +44,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> <!-- imports jQuery library -->
     <title>Saved Pokemon</title>
     </head>
-    <body>
+    <body background = "https://wallpaperplay.com/walls/full/0/8/d/182521.jpg">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">PokeNattorz</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,9 +65,17 @@
       <li>
         <a class="nav-link" href="http://localhost:8080/saved">Saved Pokemon <span class="sr-only">(current)</span></a>
       </li>
+</nav>
 
-
-
+      {% for each_poke in poke_info %}
+      <br>
+      <h1>{{each_poke.name}}</h1>
+      <img src={{each_poke.picture}}>
+      <h2>Type1: {{each_poke.ty1}}</h2>
+      <h2>Type2: {{each_poke.ty2}}</h2>
+      <br>
+      {% endfor %}
+      <h1 class="rainbow-text">This is made possible by coach Taco and coach Bell</h1>
 
 
 

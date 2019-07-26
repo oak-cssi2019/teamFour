@@ -2,9 +2,12 @@
 import webapp2
 import jinja2
 import os
+import json
+import urllib2
+import ast
 # import pokepy
 
-
+from poke_model import PokeSaved
 
 
 # this initializes the jinja2 environment
@@ -46,12 +49,45 @@ class QuizHandler(webapp2.RequestHandler):
 class PokemonHandler(webapp2.RequestHandler):
     def get(self):
         pokemon_template = the_jinja_env.get_template('templates/pokemon.html')
-        self.response.write(pokemon_template.render())
+        var_dict={
+
+            'savedPoke': ""
+        }
+        self.response.write(pokemon_template.render(var_dict))
+    def post(self):
+        p_name = self.request.get('currentPokemonName')
+        p_pic = self.request.get('currentPokemonPic')
+        p_ty1 = self.request.get('currentPokemonTY1')
+        p_ty2 = self.request.get('currentPokemonTY2')
+        # stringPoke = str(saved_p)
+        # print(p_name)
+        # print(p_pic)
+        # print(p_ty1)
+        # print(p_ty2)
+
+        savedPoke = PokeSaved(name=p_name, picture=p_pic, ty1=p_ty1, ty2=p_ty2).put()
+
+
+        #result = json.dumps(saved_p)
+        #dict = ast.literal_eval(result)
+        #myjson = json.loads(urllib2.unquote(dict))
+        # print("pokemon saving....")
+        #
+        # job1 =json.dumps(saved_p)
+        #
+        #
+        # print(job1)
+
+
+
 
 class SavedHandler(webapp2.RequestHandler):
     def get(self):
+        poke_saved = PokeSaved.query().fetch()
         saved_template = the_jinja_env.get_template('templates/saved_pokemon.html')
-        self.response.write(saved_template.render())
+        self.response.write(saved_template.render({'poke_info' : poke_saved}))
+
+
 # the routes / app configuration section
 app = webapp2.WSGIApplication([
   ('/home', HomeHandler),
